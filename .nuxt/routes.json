@@ -1,0 +1,16 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "/Users/tomoyoito/dev/recipe_computer_vision/recipe/pages/inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_17e24922"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/tomoyoito/dev/recipe_computer_vision/recipe/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_cb34a1cc"
+  }
+]
