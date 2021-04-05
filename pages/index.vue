@@ -1,8 +1,14 @@
 <template>
-  <div class="container">
-      <button class="button is-primary is-rounded" @click="login">
-        ログイン
-      </button>
+  <div class="container d-block">
+    <h1>Recipe collection</h1>
+    <img
+    height=200
+    width=250
+    class="mt-5"
+    src="@/assets/images/food.jpg">
+    <v-btn class="mt-5 button is-primary is-rounded" @click="login">
+      ログイン
+    </v-btn>
   </div>
 </template>
 

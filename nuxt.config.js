@@ -41,7 +41,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/dotenv'
+    '@nuxtjs/dotenv',
+    '@nuxtjs/vuetify'
   ],
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
