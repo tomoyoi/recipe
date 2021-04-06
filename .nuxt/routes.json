@@ -7,6 +7,13 @@
     "_name": "_17e24922"
   },
   {
+    "name": "login",
+    "path": "/login",
+    "component": "/Users/tomoyoito/dev/recipe_computer_vision/recipe/pages/login.vue",
+    "chunkName": "pages/login",
+    "_name": "_640d5231"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/Users/tomoyoito/dev/recipe_computer_vision/recipe/pages/index.vue",

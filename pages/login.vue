@@ -6,12 +6,20 @@
     width=250
     class="mt-5"
     src="@/assets/images/food.jpg">
-    ログインできた
+    <v-btn class="mt-5 button is-primary is-rounded" @click="login">
+      ログイン
+    </v-btn>
   </div>
 </template>
 
 <script>
 export default {
+  methods: {
+    login() {
+      console.log('login')
++     this.$store.dispatch('logInWithGoogle')
+    }
+  }
 }
 </script>
 
