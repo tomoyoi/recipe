@@ -31,5 +31,6 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-family: 'Lora', serif;
 }
 </style>

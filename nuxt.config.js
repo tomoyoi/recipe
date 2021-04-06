@@ -19,12 +19,15 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
+        rel: 'preconnect',
+        href: "https://fonts.gstatic.com",
+      },
+      {
         rel: 'stylesheet',
         href: "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap",
       },
     ]
   },
-
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -49,6 +52,11 @@ export default {
     '@nuxtjs/vuetify',
     'nuxt-webfontloader'
   ],
+  webfontloader: {
+    google: {
+      families: ["Playfair+Display","Roboto:100,300,400,500,700,900&display=swap","Roboto:100,300,400,500,700,900&display=swap"]
+    }
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
