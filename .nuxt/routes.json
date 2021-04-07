@@ -3,21 +3,30 @@
     "name": "inspire",
     "path": "/inspire",
     "component": "/Users/tomoyoito/dev/recipe_computer_vision/recipe/pages/inspire.vue",
-    "chunkName": "pages/inspire",
-    "_name": "_17e24922"
+    "chunkName": "pages/inspire"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "/Users/tomoyoito/dev/recipe_computer_vision/recipe/pages/login.vue",
-    "chunkName": "pages/login",
-    "_name": "_640d5231"
+    "chunkName": "pages/login"
+  },
+  {
+    "name": "register",
+    "path": "/register",
+    "component": "/Users/tomoyoito/dev/recipe_computer_vision/recipe/pages/register.vue",
+    "chunkName": "pages/register"
+  },
+  {
+    "name": "sample",
+    "path": "/sample",
+    "component": "/Users/tomoyoito/dev/recipe_computer_vision/recipe/pages/sample.vue",
+    "chunkName": "pages/sample"
   },
   {
     "name": "index",
     "path": "/",
     "component": "/Users/tomoyoito/dev/recipe_computer_vision/recipe/pages/index.vue",
-    "chunkName": "pages/index",
-    "_name": "_cb34a1cc"
+    "chunkName": "pages/index"
   }
 ]

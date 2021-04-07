@@ -1,7 +1,9 @@
 export { default as Logo } from '../../components/Logo.vue'
+export { default as SocialLogin } from '../../components/SocialLogin.vue'
 export { default as VuetifyLogo } from '../../components/VuetifyLogo.vue'
 
 export const LazyLogo = import('../../components/Logo.vue' /* webpackChunkName: "components/logo" */).then(c => wrapFunctional(c.default || c))
+export const LazySocialLogin = import('../../components/SocialLogin.vue' /* webpackChunkName: "components/social-login" */).then(c => wrapFunctional(c.default || c))
 export const LazyVuetifyLogo = import('../../components/VuetifyLogo.vue' /* webpackChunkName: "components/vuetify-logo" */).then(c => wrapFunctional(c.default || c))
 
 // nuxt/nuxt.js#8607

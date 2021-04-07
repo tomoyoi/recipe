@@ -2,6 +2,9 @@
   "Logo": {
     "description": "Auto imported from components/Logo.vue"
   },
+  "SocialLogin": {
+    "description": "Auto imported from components/SocialLogin.vue"
+  },
   "VuetifyLogo": {
     "description": "Auto imported from components/VuetifyLogo.vue"
   }

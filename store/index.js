@@ -1,49 +1,44 @@
-import { vuexfireMutations } from 'vuexfire'
-import firebase from '~/plugins/firebase'
+import { auth } from '~/plugins/firebase.js'
+
+export const strict = false
 
 export const state = () => ({
-  userUid: '',
-  userName: ''
+    user: null,
 })
 
 export const mutations = {
-  ...vuexfireMutations,
-  setUserUid(state, userUid) {
-    state.userUid = userUid
-  },
-  setUserName(state, userName) {
-    state.userName = userName
-  }
+    setUser(state, payload) {
+        state.user = payload
+    }
 }
 
 export const actions = {
-  signUp({ commit }, { email, password }) {
-    return auth().createUserWithEmailAndPassword(email, password)
-  },
+    signUp({ commit }, { email, password }) {
+        return auth().createUserWithEmailAndPassword(email, password)
+    },
 
-  signInWithEmail({ commit }, { email, password }) {
-    return auth().signInWithEmailAndPassword(email, password)
-  },
-  logInWithGoogle() {
-    const provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-      const user = result.user;
-      console.log('displayName : ' + user)
-      commit('setUserUid', user.uid)
-      commit('setUserName', user.displayName)
-      console.log('displayName : ' + user.displayName)
-    }).catch(function(error) {
-      var errorCode = error.code;
-      console.log('error : ' + errorCode)
-    });
-  }
+    signInWithEmail({ commit }, { email, password }) {
+        return auth().signInWithEmailAndPassword(email, password)
+    },
+
+    signInWithTwitter({ commit }){
+        return auth().signInWithPopup(new auth.TwitterAuthProvider())
+    },
+
+    signInWithGoogle({ commit }){
+        return auth().signInWithPopup(new auth.GoogleAuthProvider())
+    },
+
+    signOut() {
+        return auth().signOut()
+    }
 }
 
 export const getters = {
-  getUserUid(state) {
-    return state.userUid
-  },
-  getUserName(state) {
-    return state.userName
-  }
+    user(state){
+        return state.user
+    },
+    isAuthenticated (state) {
+        return !!state.user
+    }
 }

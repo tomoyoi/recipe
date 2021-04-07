@@ -1,23 +1,18 @@
 <template>
   <v-container>
-    <h1>Recipe collection</h1>
-    <img
-    height=200
-    width=250
-    class="mt-5"
-    src="@/assets/images/food.jpg">
     <v-row wrap justify="center" align="center">
       <v-col :sm="12" :md="8">
         <p class="text-center">ログインユーザのみ閲覧可能なコンテンツ</p>
+        <p class="text-center">サンプルページ</p>
         <div class="pa-5">
           <v-btn
             block
             color="indigo darken-1"
             nuxt
-            to="/sample"
+            to="/"
             class="white--text"
           >
-            サンプルページへ
+            トップページへ
           </v-btn>
         </div>
         <div class="pa-5">

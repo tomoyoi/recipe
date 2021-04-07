@@ -3,6 +3,7 @@ import { wrapFunctional } from './index'
 
 const components = {
   Logo: () => import('../../components/Logo.vue' /* webpackChunkName: "components/logo" */).then(c => wrapFunctional(c.default || c)),
+  SocialLogin: () => import('../../components/SocialLogin.vue' /* webpackChunkName: "components/social-login" */).then(c => wrapFunctional(c.default || c)),
   VuetifyLogo: () => import('../../components/VuetifyLogo.vue' /* webpackChunkName: "components/vuetify-logo" */).then(c => wrapFunctional(c.default || c))
 }
 
