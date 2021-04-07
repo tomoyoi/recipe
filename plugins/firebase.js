@@ -3,9 +3,9 @@ import firebase from 'firebase'
 if (!firebase.apps.length) {
   firebase.initializeApp(
     {
-      projectId: process.env.FIREBASE_PROJECT_ID,
       apiKey: "AIzaSyAATEW0bGxlCRWjMatijMpfE8Pbv42Fao0",
       authDomain: "cloud-vision-24d73.firebaseapp.com",
+      databaseURL: "https://cloud-vision-24d73.firebaseio.com",
       projectId: "cloud-vision-24d73",
       storageBucket: "cloud-vision-24d73.appspot.com",
       messagingSenderId: "324343967564",
