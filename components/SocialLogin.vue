@@ -95,7 +95,7 @@ export default {
         })
         .catch((err) => {
           this.$parent.socialLoginErrorMsg =
-            "現在Twitterでのログインは使用できません。後ほどお試しください。";
+            "現在Twitterでのログインは使用できません。";
         });
     },
     googleLogin: function (err) {
@@ -108,7 +108,7 @@ export default {
         })
         .catch((err) => {
           this.$parent.socialLoginErrorMsg =
-            "現在Googleでのログインは使用できません。後ほどお試しください。";
+            "現在Googleでのログインは使用できません。";
         });
     },
   },
