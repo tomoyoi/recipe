@@ -200,7 +200,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: app.router.options.base,
-      env: {"API_KEY":"AIzaSyACbohiSWp7aComfxWfZNuphYztXLHSB7M","API_URL":"https://vision.googleapis.com/v1/images:annotate?key=AIzaSyACbohiSWp7aComfxWfZNuphYztXLHSB7M"}
+      env: {"API_KEY":""}
     }
     // Only set once
 
