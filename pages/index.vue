@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <h1>Recipe collection</h1>
+  <v-container class="text-center">
+    <h1>レシピコレクション</h1>
     <img
     height=200
     width=250
@@ -8,7 +8,6 @@
     src="@/assets/images/food.jpg">
     <v-row wrap justify="center" align="center">
       <v-col :sm="12" :md="8">
-        <p class="text-center">ログインユーザのみ閲覧可能なコンテンツ</p>
           <template>
             <v-app>
               <v-container v-cloak @drop.prevent="addDropFile" @dragover.prevent>
@@ -18,15 +17,15 @@
                   @click:clear="clearCanvas"
                   accept="image/png, image/jpeg, image/bmp"
                   prepend-icon="mdi-camera"
-                  placeholder="画像をドラッグ＆ドロップか選択してください。"
+                  placeholder="画像をドラッグ＆ドロップか選択してください"
                 ></v-file-input>
                 <v-btn
                   class="my-2"
-                  color="primary"
+                  color="#389382"
                   :disabled="!file"
                   block
                   @click="detectHandWriting(file)"
-                >Detect!!</v-btn>
+                >手書き文字をデジタルに変換！</v-btn>
                 <v-row justify="center" align="center">
                   <canvas width="500" height="500" ref="preview"></canvas>
                 </v-row>
@@ -34,17 +33,6 @@
               </v-container>
             </v-app>
           </template>
-        <div class="pa-5">
-          <v-btn
-            block
-            color="indigo darken-1"
-            nuxt
-            to="/sample"
-            class="white--text"
-          >
-            サンプルページへ
-          </v-btn>
-        </div>
         <div class="pa-5">
           <v-btn
             block
@@ -112,7 +100,7 @@ export default {
           const boundingPolies = [];
           boundingPolies.push(fullTextAnnotation.boundingPoly);
           this.results = boundingPolies;
-          console.log(fullTextAnnotation)
+          console.log(this.results)
         }
       } catch (error) {
         console.log(error);

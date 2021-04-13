@@ -57,7 +57,7 @@ export default {
   ],
   webfontloader: {
     google: {
-      families: ["Playfair+Display","Roboto:100,300,400,500,700,900&display=swap","Roboto:100,300,400,500,700,900&display=swap"]
+      families: ["Sawarabi+Gothic&display=swap"]
     }
   },
 
