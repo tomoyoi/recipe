@@ -10,6 +10,7 @@
       <v-col :sm="12" :md="8">
           <template>
             <v-app>
+              {{ this.results }}
               <v-container v-cloak @drop.prevent="addDropFile" @dragover.prevent>
                 <v-file-input
                   v-model="file"
@@ -29,7 +30,6 @@
                 <v-row justify="center" align="center">
                   <canvas width="500" height="500" ref="preview"></canvas>
                 </v-row>
-                {{ this.results }}
               </v-container>
             </v-app>
           </template>
@@ -54,7 +54,7 @@ export default {
   data: function () {
     return {
       file: [],
-      results: {},
+      results: null,
     };
   },
   methods: {
@@ -70,7 +70,6 @@ export default {
         img.onload = () => {
           const canvas = this.$refs.preview;
           const context = canvas.getContext("2d");
-          console.log(canvas.width);
           if (img.width > canvas.width) {
             const scale = canvas.width / img.width;
             const sw = img.width;
@@ -95,12 +94,10 @@ export default {
       try {
         const data = await detectHandWriting(this.file);
         if (data && data.responses) {
-          console.log(data)
           const fullTextAnnotation = data.responses[0].fullTextAnnotation;
           const boundingPolies = [];
-          boundingPolies.push(fullTextAnnotation.boundingPoly);
-          this.results = boundingPolies;
-          console.log(this.results)
+          boundingPolies.push(fullTextAnnotation.text);
+          this.results = fullTextAnnotation.text;
         }
       } catch (error) {
         console.log(error);
